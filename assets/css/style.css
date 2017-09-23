@@ -245,6 +245,37 @@ hr{
    color:    #cccccc;
 }
 
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 186px;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #4aaaa5;
+}
+
+.gallery-grid li{
+	position: relative;
+}
+
+.gallery-grid li:hover .overlay{
+  	opacity: 1;
+}
+
 @media(max-width: 980px) {
 	body{
 		flex-direction: column;
@@ -311,6 +342,8 @@ hr{
 		justify-content: space-around;
 	}
 
+
+
 	.sidebar-social{
 		width: 100%;
 
@@ -353,6 +386,10 @@ hr{
 
 	.gallery-grid img{
 		width: 100%;
+		height: 270px;
+	}
+
+	.overlay{
 		height: 270px;
 	}
 }
